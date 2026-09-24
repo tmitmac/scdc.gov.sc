@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square City District Council</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            council: '#174A3A',
+            councilDark: '#10352A',
+            councilLight: '#EAF4EF',
+            gold: '#C49A3A'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(23, 74, 58, 0.88), rgba(16, 53, 42, 0.92)),
+        url("images/square-city.jpg") center/cover no-repeat;
+    }
+
+    .service-card {
+      transition: all 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-council rounded-lg flex items-center justify-center text-white">
+            <i data-feather="map" class="w-7 h-7"></i>
+          </div>
+
+          <div>
+            <div class="font-bold text-lg text-gray-900 leading-tight">
+              Square City
+            </div>
+            <div class="text-sm text-gray-500">
+              District Council
+            </div>
+          </div>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#" class="text-council border-b-2 border-council pb-1">Home</a>
+          <a href="#services" class="text-gray-600 hover:text-council">Services</a>
+          <a href="#council" class="text-gray-600 hover:text-council">Council</a>
+          <a href="#news" class="text-gray-600 hover:text-council">News</a>
+          <a href="#contact" class="text-gray-600 hover:text-council">Contact</a>
+        </nav>
+
+        <!-- Search -->
+        <button
+          class="hidden md:flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2.5 rounded-lg text-sm text-gray-600">
+          <i data-feather="search" class="w-4 h-4"></i>
+          Search
+        </button>
+
+        <button class="md:hidden text-gray-700">
+          <i data-feather="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero text-white">
+    <div class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm mb-6">
+          <span class="w-2 h-2 bg-green-300 rounded-full"></span>
+          Official website of Square City District Council
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Welcome to Square City
+        </h1>
+
+        <p class="text-lg md:text-xl text-white/85 leading-relaxed mb-9 max-w-2xl">
+          Your local council for the Square City district. Find council services,
+          information, news, facilities and everything you need to get things done.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#services"
+             class="bg-white text-council font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+            Find a service
+          </a>
+
+          <a href="#contact"
+             class="border border-white/60 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition">
+            Contact Council
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Quick Links -->
+  <section class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-7">
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <a href="#" class="flex items-center gap-4 p-4 rounded-lg hover:bg-councilLight transition">
+          <div class="w-10 h-10 rounded-lg bg-councilLight text-council flex items-center justify-center">
+            <i data-feather="credit-card"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">Pay a bill</div>
+            <div class="text-xs text-gray-500">Rates & fees</div>
+          </div>
+        </a>
+
+        <a href="#" class="flex items-center gap-4 p-4 rounded-lg hover:bg-councilLight transition">
+          <div class="w-10 h-10 rounded-lg bg-councilLight text-council flex items-center justify-center">
+            <i data-feather="calendar"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">Book a facility</div>
+            <div class="text-xs text-gray-500">Halls & venues</div>
+          </div>
+        </a>
+
+        <a href="#" class="flex items-center gap-4 p-4 rounded-lg hover:bg-councilLight transition">
+          <div class="w-10 h-10 rounded-lg bg-councilLight text-council flex items-center justify-center">
+            <i data-feather="file-text"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">Apply online</div>
+            <div class="text-xs text-gray-500">Applications</div>
+          </div>
+        </a>
+
+        <a href="#" class="flex items-center gap-4 p-4 rounded-lg hover:bg-councilLight transition">
+          <div class="w-10 h-10 rounded-lg bg-councilLight text-council flex items-center justify-center">
+            <i data-feather="alert-circle"></i>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">Report a problem</div>
+            <div class="text-xs text-gray-500">Roads & public spaces</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services -->
+  <section id="services" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-council mb-2">
+            Council services
+          </p>
+
+          <h2 class="text-3xl font-bold text-gray-900">
+            What can we help you with?
+          </h2>
+
+          <p class="text-gray-600 mt-3 max-w-2xl">
+            Access common Square City District Council services and information.
+          </p>
+        </div>
+
+        <a href="#" class="text-council font-semibold text-sm hover:underline">
+          View all services →
+        </a>
+      </div>
+
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <a href="#" class="service-card bg-white border border-gray-200 rounded-xl p-6">
+          <div class="w-12 h-12 bg-councilLight text-council rounded-lg flex items-center justify-center mb-5">
+            <i data-feather="home"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-2">Property & rates</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Find property information, rates, valuations and payment options.
+          </p>
+        </a>
+
+        <a href="#" class="service-card bg-white border border-gray-200 rounded-xl p-6">
+          <div class="w-12 h-12 bg-councilLight text-council rounded-lg flex items-center justify-center mb-5">
+            <i data-feather="truck"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-2">Rubbish & recycling</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Check collection days, recycling information and waste facilities.
+          </p>
+        </a>
+
+        <a href="licences-regulations.html" class="service-card bg-white border border-gray-200 rounded-xl p-6">
+          <div class="w-12 h-12 bg-councilLight text-council rounded-lg flex items-center justify-center mb-5">
+            <i data-feather="edit-3"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-2">Licenses & regulations</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Licences, permits and rules for selling food and alcohol, fundraising, busking, fires, promotions, displays and events.
+          </p>
+        </a>
+
+        <a href="#" class="service-card bg-white border border-gray-200 rounded-xl p-6">
+          <div class="w-12 h-12 bg-councilLight text-council rounded-lg flex items-center justify-center mb-5">
+            <i data-feather="map-pin"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 mb-2">Parks & recreation</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Explore parks, playgrounds, libraries, pools and community facilities.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Notice -->
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="bg-councilLight border-l-4 border-council rounded-r-xl p-7 flex flex-col md:flex-row gap-5 md:items-center justify-between">
+        <div class="flex gap-4">
+          <div class="text-council mt-1">
+            <i data-feather="info"></i>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">
+              Council offices and services
+            </h3>
+            <p class="text-sm text-gray-700">
+              Council services are available online, by phone and at the Square City Civic Centre.
+            </p>
+          </div>
+        </div>
+
+        <a href="#" class="whitespace-nowrap font-semibold text-council hover:underline">
+          Contact us →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- News -->
+  <section id="news" class="bg-white border-y border-gray-200 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-council mb-2">
+            Latest news
+          </p>
+
+          <h2 class="text-3xl font-bold text-gray-900">
+            What's happening in Square City
+          </h2>
+        </div>
+
+        <a href="#" class="hidden sm:block text-council font-semibold text-sm hover:underline">
+          All council news →
+        </a>
+      </div>
+
+
+      <div class="grid md:grid-cols-3 gap-7">
+
+        <article class="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
+          <div class="h-40 bg-gray-200 flex items-center justify-center text-gray-400">
+            <i data-feather="image" class="w-10 h-10"></i>
+          </div>
+
+          <div class="p-6">
+            <div class="text-xs font-semibold text-council uppercase tracking-wide mb-3">
+              Council update
+            </div>
+
+            <h3 class="font-bold text-xl text-gray-900 mb-3">
+              New community facilities programme announced
+            </h3>
+
+            <p class="text-sm text-gray-600 leading-relaxed mb-5">
+              Council has announced a programme of improvements to community
+              facilities across the district.
+            </p>
+
+            <a href="#" class="text-sm font-semibold text-council">
+              Read more →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
+          <div class="h-40 bg-gray-200 flex items-center justify-center text-gray-400">
+            <i data-feather="image" class="w-10 h-10"></i>
+          </div>
+
+          <div class="p-6">
+            <div class="text-xs font-semibold text-council uppercase tracking-wide mb-3">
+              Transport
+            </div>
+
+            <h3 class="font-bold text-xl text-gray-900 mb-3">
+              Road maintenance works begin across Square City
+            </h3>
+
+            <p class="text-sm text-gray-600 leading-relaxed mb-5">
+              Planned maintenance and resurfacing works are getting underway
+              on several local roads.
+            </p>
+
+            <a href="#" class="text-sm font-semibold text-council">
+              Read more →
+            </a>
+          </div>
+        </article>
+
+
+        <article class="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
+          <div class="h-40 bg-gray-200 flex items-center justify-center text-gray-400">
+            <i data-feather="image" class="w-10 h-10"></i>
+          </div>
+
+          <div class="p-6">
+            <div class="text-xs font-semibold text-council uppercase tracking-wide mb-3">
+              Community
+            </div>
+
+            <h3 class="font-bold text-xl text-gray-900 mb-3">
+              Have your say on the district's future
+            </h3>
+
+            <p class="text-sm text-gray-600 leading-relaxed mb-5">
+              Residents can provide feedback on upcoming council plans and
+              projects through the consultation portal.
+            </p>
+
+            <a href="#" class="text-sm font-semibold text-council">
+              Read more →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Council section -->
+  <section id="council" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-council mb-2">
+            Your council
+          </p>
+
+          <h2 class="text-3xl font-bold text-gray-900 mb-5">
+            Working for Square City
+          </h2>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Square City District Council is responsible for local services,
+            infrastructure, facilities and community development throughout
+            the Square City district.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-7">
+            <div class="bg-white border border-gray-200 rounded-lg p-5">
+              <div class="text-2xl font-bold text-council">24</div>
+              <div class="text-sm text-gray-500 mt-1">Council members</div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-5">
+              <div class="text-2xl font-bold text-council">12</div>
+              <div class="text-sm text-gray-500 mt-1">District wards</div>
+            </div>
+          </div>
+
+          <a href="#" class="inline-flex items-center gap-2 bg-council text-white px-6 py-3 rounded-lg font-semibold hover:bg-councilDark transition">
+            About the Council
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+
+        <div class="bg-council rounded-2xl p-10 text-white">
+          <i data-feather="users" class="w-12 h-12 mb-7"></i>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Get involved
+          </h3>
+
+          <p class="text-white/80 leading-relaxed mb-7">
+            Find out about council meetings, consultations, public notices
+            and opportunities to have your say on decisions affecting
+            Square City.
+          </p>
+
+          <a href="#" class="inline-flex items-center gap-2 bg-white text-council px-5 py-3 rounded-lg font-semibold">
+            Have your say
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="bg-councilDark text-white py-14">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <div>
+          <h3 class="font-bold text-xl mb-3">Square City District Council</h3>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Serving the Square City district and its communities.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3">Contact</h4>
+          <div class="space-y-2 text-sm text-white/70">
+            <p>Square City Civic Centre</p>
+            <p>1 Civic Square, Square City</p>
+            <p>Phone: 0800 555 010</p>
+            <p>Email: info@squarecity.gov.sc</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-3">Opening hours</h4>
+          <div class="text-sm text-white/70 space-y-2">
+            <p>Monday–Friday: 8:30am–5:00pm</p>
+            <p>Saturday–Sunday: Closed</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/50">
+        <p>© 2026 Square City District Council</p>
+
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Accessibility</a>
+          <a href="#" class="hover:text-white">Terms of use</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+</html>
