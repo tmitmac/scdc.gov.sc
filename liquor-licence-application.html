@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Apply for an Alcohol Licence | Square City District Council</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            council: '#174A3A',
+            councilDark: '#10352A',
+            councilLight: '#EAF4EF',
+            gold: '#C49A3A'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input,
+    select,
+    textarea {
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #174A3A;
+      box-shadow: 0 0 0 3px rgba(23, 74, 58, 0.10);
+    }
+
+    .required::after {
+      content: " *";
+      color: #b42318;
+    }
+
+    .step {
+      transition: all 0.2s ease;
+    }
+
+    .step.active {
+      background: #174A3A;
+      color: white;
+    }
+
+    .step.complete {
+      background: #EAF4EF;
+      color: #174A3A;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-gray-200">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="h-20 flex items-center justify-between">
+
+        <a href="index.html" class="flex items-center gap-3">
+
+          <div class="w-12 h-12 bg-council rounded-lg flex items-center justify-center text-white">
+            <i data-feather="map" class="w-7 h-7"></i>
+          </div>
+
+          <div>
+            <div class="font-bold text-lg text-gray-900 leading-tight">
+              Square City
+            </div>
+
+            <div class="text-sm text-gray-500">
+              District Council
+            </div>
+          </div>
+
+        </a>
+
+
+        <div class="hidden md:flex items-center gap-5 text-sm">
+
+          <span class="text-gray-500">
+            Alcohol Licensing
+          </span>
+
+          <span class="w-px h-5 bg-gray-300"></span>
+
+          <a href="index.html"
+             class="text-council font-semibold hover:underline">
+            Exit application
+          </a>
+
+        </div>
+
+
+        <button class="md:hidden text-gray-700">
+          <i data-feather="menu"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- APPLICATION HEADER -->
+  <section class="bg-council text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+
+      <div class="max-w-4xl">
+
+        <div class="flex items-center gap-3 mb-4">
+
+          <div class="w-11 h-11 bg-white/10 rounded-lg flex items-center justify-center">
+
+            <i data-feather="file-plus" class="w-6 h-6"></i>
+
+          </div>
+
+          <span class="text-sm uppercase tracking-wider font-semibold text-green-100">
+            Online application
+          </span>
+
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold">
+          Apply for an Alcohol Licence
+        </h1>
+
+        <p class="mt-3 text-white/75 max-w-2xl">
+          Complete this application to apply for an alcohol licence
+          in the Square City district.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- PROGRESS -->
+  <div class="bg-white border-b border-gray-200">
+
+    <div class="max-w-7xl mx-auto px-6 py-5">
+
+      <div class="flex items-center gap-2 overflow-x-auto">
+
+        <div class="step active rounded-lg px-4 py-2 text-sm font-semibold whitespace-nowrap">
+          1. Applicant
+        </div>
+
+        <i data-feather="chevron-right"
+           class="w-4 h-4 text-gray-300 flex-shrink-0"></i>
+
+        <div class="step rounded-lg px-4 py-2 text-sm font-semibold text-gray-500 whitespace-nowrap">
+          2. Licence
+        </div>
+
+        <i data-feather="chevron-right"
+           class="w-4 h-4 text-gray-300 flex-shrink-0"></i>
+
+        <div class="step rounded-lg px-4 py-2 text-sm font-semibold text-gray-500 whitespace-nowrap">
+          3. Premises
+        </div>
+
+        <i data-feather="chevron-right"
+           class="w-4 h-4 text-gray-300 flex-shrink-0"></i>
+
+        <div class="step rounded-lg px-4 py-2 text-sm font-semibold text-gray-500 whitespace-nowrap">
+          4. Documents
+        </div>
+
+        <i data-feather="chevron-right"
+           class="w-4 h-4 text-gray-300 flex-shrink-0"></i>
+
+        <div class="step rounded-lg px-4 py-2 text-sm font-semibold text-gray-500 whitespace-nowrap">
+          5. Declaration
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- MAIN -->
+  <main class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="grid lg:grid-cols-3 gap-8">
+
+
+      <!-- FORM -->
+      <div class="lg:col-span-2">
+
+        <form id="licenceForm">
+
+
+          <!-- INTRO NOTICE -->
+          <div class="bg-councilLight border border-green-100 rounded-xl p-5 mb-7">
+
+            <div class="flex gap-4">
+
+              <i data-feather="info"
+                 class="w-5 h-5 text-council mt-0.5 flex-shrink-0">
+              </i>
+
+              <div>
+
+                <h2 class="font-bold text-gray-900 mb-1">
+                  Before you begin
+                </h2>
+
+                <p class="text-sm text-gray-700 leading-relaxed">
+                  Please have your premises details, proposed trading hours,
+                  manager information and supporting documents available.
+                  Fields marked with an asterisk are required.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SECTION 1 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  1
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Applicant details
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Tell us about the person or organisation making the application.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7 space-y-6">
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Applicant type
+                </label>
+
+                <select
+                  id="applicantType"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm bg-white">
+
+                  <option value="">Select applicant type</option>
+                  <option>Individual</option>
+                  <option>Company</option>
+                  <option>Partnership</option>
+                  <option>Club or incorporated society</option>
+                  <option>Other organisation</option>
+
+                </select>
+
+              </div>
+
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    First name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                    placeholder="First name">
+
+                </div>
+
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Last name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                    placeholder="Last name">
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <label class="block text-sm font-semibold text-gray-800 mb-2">
+                  Organisation or company name
+                </label>
+
+                <input
+                  type="text"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="If applicable">
+
+              </div>
+
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Email address
+                  </label>
+
+                  <input
+                    type="email"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                    placeholder="name@example.com">
+
+                </div>
+
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Phone number
+                  </label>
+
+                  <input
+                    type="tel"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                    placeholder="Phone number">
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Postal address
+                </label>
+
+                <textarea
+                  rows="3"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Street address, suburb, city and postcode"></textarea>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SECTION 2 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  2
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Licence details
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Select the type of alcohol licence you are applying for.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7 space-y-6">
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Licence type
+                </label>
+
+                <select
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm bg-white">
+
+                  <option value="">Select licence type</option>
+                  <option>On-licence</option>
+                  <option>Off-licence</option>
+                  <option>Club licence</option>
+                  <option>Special licence</option>
+
+                </select>
+
+              </div>
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Purpose of the licence
+                </label>
+
+                <textarea
+                  rows="4"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Describe how alcohol will be sold or supplied under this licence"></textarea>
+
+              </div>
+
+
+              <div>
+
+                <label class="block text-sm font-semibold text-gray-800 mb-3">
+                  Type of business or activity
+                </label>
+
+                <div class="grid sm:grid-cols-2 gap-3">
+
+                  <label class="border border-gray-200 rounded-lg p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+
+                    <input type="checkbox" class="w-4 h-4 accent-[#174A3A]">
+
+                    <span class="text-sm">
+                      Restaurant or café
+                    </span>
+
+                  </label>
+
+
+                  <label class="border border-gray-200 rounded-lg p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+
+                    <input type="checkbox" class="w-4 h-4 accent-[#174A3A]">
+
+                    <span class="text-sm">
+                      Bar or tavern
+                    </span>
+
+                  </label>
+
+
+                  <label class="border border-gray-200 rounded-lg p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+
+                    <input type="checkbox" class="w-4 h-4 accent-[#174A3A]">
+
+                    <span class="text-sm">
+                      Retailer
+                    </span>
+
+                  </label>
+
+
+                  <label class="border border-gray-200 rounded-lg p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+
+                    <input type="checkbox" class="w-4 h-4 accent-[#174A3A]">
+
+                    <span class="text-sm">
+                      Club or society
+                    </span>
+
+                  </label>
+
+
+                  <label class="border border-gray-200 rounded-lg p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+
+                    <input type="checkbox" class="w-4 h-4 accent-[#174A3A]">
+
+                    <span class="text-sm">
+                      Event
+                    </span>
+
+                  </label>
+
+
+                  <label class="border border-gray-200 rounded-lg p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+
+                    <input type="checkbox" class="w-4 h-4 accent-[#174A3A]">
+
+                    <span class="text-sm">
+                      Other
+                    </span>
+
+                  </label>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SECTION 3 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  3
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Premises details
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Provide details about the premises where alcohol will be supplied.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7 space-y-6">
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Premises name
+                </label>
+
+                <input
+                  type="text"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Trading or premises name">
+
+              </div>
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Street address
+                </label>
+
+                <input
+                  type="text"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Street address">
+
+              </div>
+
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Suburb
+                  </label>
+
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+                </div>
+
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Postcode
+                  </label>
+
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <label class="block text-sm font-semibold text-gray-800 mb-2">
+                  Description of premises
+                </label>
+
+                <textarea
+                  rows="4"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Describe the premises, including areas where alcohol will be supplied"></textarea>
+
+              </div>
+
+
+              <div>
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Proposed commencement date
+                </label>
+
+                <input
+                  type="date"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SECTION 4 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  4
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Proposed trading hours
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Tell us when alcohol will be sold or supplied.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7">
+
+              <div class="overflow-x-auto">
+
+                <table class="w-full text-sm">
+
+                  <thead>
+
+                    <tr class="border-b border-gray-200">
+
+                      <th class="text-left py-3 pr-4 font-semibold text-gray-700">
+                        Day
+                      </th>
+
+                      <th class="text-left py-3 px-4 font-semibold text-gray-700">
+                        Start
+                      </th>
+
+                      <th class="text-left py-3 pl-4 font-semibold text-gray-700">
+                        Finish
+                      </th>
+
+                    </tr>
+
+                  </thead>
+
+                  <tbody class="divide-y divide-gray-100">
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Monday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Tuesday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Wednesday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Thursday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Friday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Saturday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                      <td class="py-3 font-medium">
+                        Sunday
+                      </td>
+
+                      <td class="py-3 px-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                      <td class="py-3 pl-4">
+                        <input type="time"
+                               class="border border-gray-300 rounded-lg px-3 py-2">
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SECTION 5 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  5
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Manager details
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Provide details of the person responsible for managing the premises.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7 space-y-6">
+
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    First name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+                </div>
+
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Last name
+                  </label>
+
+                  <input
+                    type="text"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+                </div>
+
+              </div>
+
+
+              <div class="grid md:grid-cols-2 gap-5">
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Phone number
+                  </label>
+
+                  <input
+                    type="tel"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+                </div>
+
+
+                <div>
+
+                  <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                    Email address
+                  </label>
+
+                  <input
+                    type="email"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm">
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <label class="block text-sm font-semibold text-gray-800 mb-2">
+                  Manager experience and qualifications
+                </label>
+
+                <textarea
+                  rows="4"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Provide relevant experience, qualifications or other information"></textarea>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SECTION 6 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  6
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Supporting documents
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Upload documents supporting your application.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7 space-y-5">
+
+
+              <div>
+
+                <label class="block text-sm font-semibold text-gray-800 mb-2">
+                  Premises plan
+                </label>
+
+                <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-council transition">
+
+                  <i data-feather="upload-cloud"
+                     class="w-8 h-8 mx-auto text-gray-400 mb-3">
+                  </i>
+
+                  <p class="text-sm font-semibold text-gray-700">
+                    Choose a file to upload
+                  </p>
+
+                  <p class="text-xs text-gray-500 mt-1 mb-4">
+                    PDF, JPG or PNG
+                  </p>
+
+                  <input
+                    type="file"
+                    class="block mx-auto text-sm">
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <label class="block text-sm font-semibold text-gray-800 mb-2">
+                  Other supporting documents
+                </label>
+
+                <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-council transition">
+
+                  <i data-feather="paperclip"
+                     class="w-8 h-8 mx-auto text-gray-400 mb-3">
+                  </i>
+
+                  <p class="text-sm font-semibold text-gray-700">
+                    Add supporting documents
+                  </p>
+
+                  <p class="text-xs text-gray-500 mt-1 mb-4">
+                    You may select multiple files
+                  </p>
+
+                  <input
+                    type="file"
+                    multiple
+                    class="block mx-auto text-sm">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- SECTION 7 -->
+          <section class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-7">
+
+            <div class="px-7 py-6 border-b border-gray-200">
+
+              <div class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-council text-white rounded-full flex items-center justify-center font-bold">
+                  7
+                </div>
+
+                <div>
+                  <h2 class="text-xl font-bold text-gray-900">
+                    Declaration
+                  </h2>
+
+                  <p class="text-sm text-gray-500 mt-1">
+                    Confirm that the information supplied is accurate.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="p-7">
+
+
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-6">
+
+                <p class="text-sm text-gray-700 leading-relaxed">
+                  I declare that the information provided in this application
+                  is true and correct to the best of my knowledge. I understand
+                  that the Council may verify information provided as part of
+                  the application process and that additional information may
+                  be requested.
+                </p>
+
+              </div>
+
+
+              <label class="flex items-start gap-3 cursor-pointer">
+
+                <input
+                  id="declaration"
+                  type="checkbox"
+                  class="w-5 h-5 mt-0.5 accent-[#174A3A]">
+
+                <span class="text-sm text-gray-700">
+                  I confirm that I have read and agree to the declaration above.
+                </span>
+
+              </label>
+
+
+              <div class="mt-6">
+
+                <label class="required block text-sm font-semibold text-gray-800 mb-2">
+                  Applicant name
+                </label>
+
+                <input
+                  type="text"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm"
+                  placeholder="Enter your full name">
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- BUTTONS -->
+          <div class="flex flex-col sm:flex-row justify-between gap-4">
+
+            <a href="licences.html"
+               class="inline-flex items-center justify-center gap-2 border border-gray-300 bg-white text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50">
+
+              <i data-feather="arrow-left" class="w-4 h-4"></i>
+
+              Save and exit
+
+            </a>
+
+
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center gap-2 bg-council text-white px-7 py-3 rounded-lg font-semibold hover:bg-councilDark transition">
+
+              Review application
+
+              <i data-feather="arrow-right" class="w-4 h-4"></i>
+
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+
+
+      <!-- SIDEBAR -->
+      <aside class="lg:col-span-1">
+
+        <div class="lg:sticky lg:top-8 space-y-5">
+
+
+          <!-- APPLICATION SUMMARY -->
+          <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+
+            <div class="px-5 py-4 border-b border-gray-200">
+
+              <h2 class="font-bold text-gray-900">
+                Application
+              </h2>
+
+            </div>
+
+
+            <div class="p-5">
+
+              <div class="flex items-center gap-3 mb-5">
+
+                <div class="w-10 h-10 bg-councilLight text-council rounded-lg flex items-center justify-center">
+
+                  <i data-feather="wine"></i>
+
+                </div>
+
+                <div>
+
+                  <div class="text-xs text-gray-500">
+                    Application type
+                  </div>
+
+                  <div class="font-semibold text-gray-900">
+                    Alcohol licence
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="border-t border-gray-100 pt-4 space-y-4">
+
+                <div class="flex justify-between text-sm">
+
+                  <span class="text-gray-500">
+                    Status
+                  </span>
+
+                  <span class="font-semibold text-gray-700">
+                    Draft
+                  </span>
+
+                </div>
+
+
+                <div class="flex justify-between text-sm">
+
+                  <span class="text-gray-500">
+                    Reference
+                  </span>
+
+                  <span class="font-mono text-gray-700">
+                    Not assigned
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- HELP -->
+          <div class="bg-councilLight rounded-xl p-5">
+
+            <div class="flex items-center gap-3 mb-3">
+
+              <div class="w-9 h-9 bg-white rounded-lg flex items-center justify-center text-council">
+
+                <i data-feather="help-circle"></i>
+
+              </div>
+
+              <h3 class="font-bold text-gray-900">
+                Need help?
+              </h3>
+
+            </div>
+
+            <p class="text-sm text-gray-700 leading-relaxed mb-4">
+              If you are unsure which licence you require or need help
+              completing this application, contact the licensing team.
+            </p>
+
+            <a href="#"
+               class="text-sm font-semibold text-council hover:underline">
+              Contact licensing →
+            </a>
+
+          </div>
+
+
+
+          <!-- SECURITY -->
+          <div class="bg-white border border-gray-200 rounded-xl p-5">
+
+            <div class="flex gap-3">
+
+              <i data-feather="lock"
+                 class="w-5 h-5 text-council flex-shrink-0">
+              </i>
+
+              <div>
+
+                <h3 class="font-semibold text-gray-900 text-sm">
+                  Your information
+                </h3>
+
+                <p class="text-xs text-gray-500 leading-relaxed mt-2">
+                  Information submitted through this form is handled
+                  in accordance with the Council's privacy requirements.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="bg-councilDark text-white mt-10">
+
+    <div class="max-w-7xl mx-auto px-6 py-10">
+
+      <div class="flex flex-col md:flex-row justify-between gap-6">
+
+        <div>
+
+          <div class="font-bold">
+            Square City District Council
+          </div>
+
+          <p class="text-sm text-white/50 mt-1">
+            Alcohol Licensing Services
+          </p>
+
+        </div>
+
+
+        <div class="text-sm text-white/50">
+
+          <p>
+            1 Civic Square, Square City
+          </p>
+
+          <p class="mt-1">
+            0800 555 010 · licensing@squarecity.gov.sc
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="border-t border-white/10 mt-8 pt-5 text-xs text-white/40">
+
+        © 2026 Square City District Council
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- REVIEW MODAL -->
+  <div id="reviewModal"
+       class="fixed inset-0 bg-black/50 hidden items-center justify-center z-[100] p-5">
+
+    <div class="bg-white rounded-xl shadow-2xl max-w-lg w-full">
+
+      <div class="p-6 border-b border-gray-200">
+
+        <div class="flex items-center gap-3">
+
+          <div class="w-10 h-10 bg-councilLight text-council rounded-lg flex items-center justify-center">
+
+            <i data-feather="check-circle"></i>
+
+          </div>
+
+          <div>
+
+            <h2 class="font-bold text-xl text-gray-900">
+              Review your application
+            </h2>
+
+            <p class="text-sm text-gray-500">
+              Your application is ready to be reviewed.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="p-6">
+
+        <div class="bg-gray-50 rounded-lg p-4 text-sm text-gray-600 leading-relaxed">
+
+          Please review all information before submitting your application.
+          The application will not be submitted until you confirm the
+          final submission.
+
+        </div>
+
+
+        <div class="flex flex-col sm:flex-row justify-end gap-3 mt-6">
+
+          <button
+            id="closeModal"
+            class="px-5 py-3 rounded-lg border border-gray-300 font-semibold text-gray-700 hover:bg-gray-50">
+            Continue editing
+          </button>
+
+          <button
+            id="submitApplication"
+            class="px-5 py-3 rounded-lg bg-council text-white font-semibold hover:bg-councilDark">
+            Submit application
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+
+    feather.replace();
+
+
+    const form = document.getElementById("licenceForm");
+    const modal = document.getElementById("reviewModal");
+    const closeModal = document.getElementById("closeModal");
+    const submitApplication = document.getElementById("submitApplication");
+    const declaration = document.getElementById("declaration");
+
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      if (!declaration.checked) {
+
+        alert("Please confirm the declaration before reviewing your application.");
+
+        declaration.focus();
+
+        return;
+
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+    });
+
+
+    closeModal.addEventListener("click", function() {
+
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+
+    });
+
+
+    submitApplication.addEventListener("click", function() {
+
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+
+      document.body.innerHTML = `
+        <div class="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+
+          <div class="max-w-xl w-full bg-white border border-gray-200 rounded-2xl shadow-sm p-10 text-center">
+
+            <div class="w-16 h-16 bg-councilLight text-council rounded-full flex items-center justify-center mx-auto mb-6">
+
+              <i data-feather="check" class="w-8 h-8"></i>
+
+            </div>
+
+            <p class="text-sm font-semibold uppercase tracking-wider text-council mb-3">
+              Application submitted
+            </p>
+
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">
+              Thank you
+            </h1>
+
+            <p class="text-gray-600 leading-relaxed mb-7">
+              Your alcohol licence application has been submitted
+              to Square City District Council.
+            </p>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-7">
+
+              <div class="text-xs text-gray-500 mb-1">
+                Application reference
+              </div>
+
+              <div class="font-mono text-lg font-bold text-gray-900">
+                SC-ALC-2026-00481
+              </div>
+
+            </div>
+
+            <a
+              href="index.html"
+              class="inline-flex items-center justify-center gap-2 bg-council text-white px-6 py-3 rounded-lg font-semibold hover:bg-councilDark">
+
+              Return to Council website
+
+              <i data-feather="arrow-right" class="w-4 h-4"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+      `;
+
+      feather.replace();
+
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Licences & Regulations | Square City District Council</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            council: '#174A3A',
+            councilDark: '#10352A',
+            councilLight: '#EAF4EF',
+            gold: '#C49A3A'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .category-card {
+      transition: all 0.2s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .service-link {
+      transition: background 0.15s ease;
+    }
+
+    .service-link:hover {
+      background: #f7faf8;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="h-20 flex items-center justify-between">
+
+        <a href="index.html" class="flex items-center gap-3">
+
+          <div class="w-12 h-12 bg-council rounded-lg flex items-center justify-center text-white">
+            <i data-feather="map" class="w-7 h-7"></i>
+          </div>
+
+          <div>
+            <div class="font-bold text-lg text-gray-900 leading-tight">
+              Square City
+            </div>
+            <div class="text-sm text-gray-500">
+              District Council
+            </div>
+          </div>
+
+        </a>
+
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+          <a href="index.html"
+             class="text-gray-600 hover:text-council">
+            Home
+          </a>
+
+          <a href="#"
+             class="text-council border-b-2 border-council pb-1">
+            Services
+          </a>
+
+          <a href="#"
+             class="text-gray-600 hover:text-council">
+            Council
+          </a>
+
+          <a href="#"
+             class="text-gray-600 hover:text-council">
+            News
+          </a>
+
+          <a href="#"
+             class="text-gray-600 hover:text-council">
+            Contact
+          </a>
+
+        </nav>
+
+
+        <button
+          class="hidden md:flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2.5 rounded-lg text-sm text-gray-600">
+
+          <i data-feather="search" class="w-4 h-4"></i>
+
+          Search
+
+        </button>
+
+
+        <button class="md:hidden text-gray-700">
+          <i data-feather="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b border-gray-200">
+
+    <div class="max-w-7xl mx-auto px-6 py-4">
+
+      <div class="flex items-center gap-2 text-sm">
+
+        <a href="index.html"
+           class="text-council hover:underline">
+          Home
+        </a>
+
+        <i data-feather="chevron-right"
+           class="w-4 h-4 text-gray-400">
+        </i>
+
+        <span class="text-gray-500">
+          Services
+        </span>
+
+        <i data-feather="chevron-right"
+           class="w-4 h-4 text-gray-400">
+        </i>
+
+        <span class="text-gray-700 font-medium">
+          Licences & Regulations
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Page Header -->
+  <section class="bg-council text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+      <div class="max-w-3xl">
+
+        <div class="flex items-center gap-3 mb-5">
+
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+            <i data-feather="clipboard" class="w-6 h-6"></i>
+          </div>
+
+          <span class="text-sm font-semibold uppercase tracking-wider text-green-100">
+            Council services
+          </span>
+
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-5">
+          Licences & Regulations
+        </h1>
+
+        <p class="text-lg text-white/80 leading-relaxed max-w-2xl">
+          Apply for local licences, permits and approvals, and find out
+          about the rules and regulations that apply to businesses,
+          property owners and residents in Square City.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Search -->
+  <section class="bg-white border-b border-gray-200">
+
+    <div class="max-w-7xl mx-auto px-6 py-8">
+
+      <label class="block text-sm font-semibold text-gray-800 mb-2">
+        Find a licence or regulation
+      </label>
+
+      <div class="relative max-w-3xl">
+
+        <i data-feather="search"
+           class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5">
+        </i>
+
+        <input
+          id="serviceSearch"
+          type="text"
+          placeholder="Search licences, permits or regulations..."
+          class="w-full border border-gray-300 rounded-lg pl-12 pr-4 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-council/20 focus:border-council">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-6 py-14">
+
+
+    <!-- Popular -->
+    <section class="mb-14">
+
+      <div class="flex items-end justify-between mb-7">
+
+        <div>
+
+          <p class="text-sm font-semibold uppercase tracking-wider text-council mb-2">
+            Popular services
+          </p>
+
+          <h2 class="text-2xl font-bold text-gray-900">
+            Apply for a licence
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <a href="#"
+           class="bg-white border border-gray-200 rounded-xl p-6 category-card">
+
+          <div class="flex items-start justify-between">
+
+            <div class="w-11 h-11 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="coffee"></i>
+            </div>
+
+            <i data-feather="arrow-up-right"
+               class="w-5 h-5 text-gray-400">
+            </i>
+
+          </div>
+
+          <h3 class="font-bold text-lg text-gray-900 mt-5 mb-2">
+            Food business registration
+          </h3>
+
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Register a food business, find food safety requirements
+            and manage your registration.
+          </p>
+
+        </a>
+
+
+        <a href="alcohol-licencing.html"
+           class="bg-white border border-gray-200 rounded-xl p-6 category-card">
+
+          <div class="flex items-start justify-between">
+
+            <div class="w-11 h-11 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="music"></i>
+            </div>
+
+            <i data-feather="arrow-up-right"
+               class="w-5 h-5 text-gray-400">
+            </i>
+
+          </div>
+
+          <h3 class="font-bold text-lg text-gray-900 mt-5 mb-2">
+            Alcohol licences
+          </h3>
+
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Apply for on-licences, off-licences, club licences
+            and special licences.
+          </p>
+
+        </a>
+
+
+        <a href="#"
+           class="bg-white border border-gray-200 rounded-xl p-6 category-card">
+
+          <div class="flex items-start justify-between">
+
+            <div class="w-11 h-11 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="home"></i>
+            </div>
+
+            <i data-feather="arrow-up-right"
+               class="w-5 h-5 text-gray-400">
+            </i>
+
+          </div>
+
+          <h3 class="font-bold text-lg text-gray-900 mt-5 mb-2">
+            Building consents
+          </h3>
+
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Find out whether your project requires a building consent
+            and submit an application.
+          </p>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Categories -->
+    <section>
+
+      <div class="mb-8">
+
+        <p class="text-sm font-semibold uppercase tracking-wider text-council mb-2">
+          Licences and permits
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900">
+          Browse by category
+        </h2>
+
+      </div>
+
+
+      <div id="categories"
+           class="grid md:grid-cols-2 gap-5">
+
+
+        <!-- Alcohol -->
+        <div class="category-card bg-white border border-gray-200 rounded-xl p-6">
+
+          <div class="flex gap-4">
+
+            <div class="w-11 h-11 flex-shrink-0 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="wine"></i>
+            </div>
+
+            <div class="flex-1">
+
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Alcohol licensing
+              </h3>
+
+              <p class="text-sm text-gray-500 mb-4">
+                Licences for selling or supplying alcohol.
+              </p>
+
+              <div class="space-y-1">
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>On-licence</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Off-licence</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Club licence</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Special licence</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Animals -->
+        <div class="category-card bg-white border border-gray-200 rounded-xl p-6">
+
+          <div class="flex gap-4">
+
+            <div class="w-11 h-11 flex-shrink-0 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="heart"></i>
+            </div>
+
+            <div class="flex-1">
+
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Animals & dogs
+              </h3>
+
+              <p class="text-sm text-gray-500 mb-4">
+                Animal registrations and responsible ownership.
+              </p>
+
+              <div class="space-y-1">
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Dog registration</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Keeping animals</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Stock on roads</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Business -->
+        <div class="category-card bg-white border border-gray-200 rounded-xl p-6">
+
+          <div class="flex gap-4">
+
+            <div class="w-11 h-11 flex-shrink-0 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="briefcase"></i>
+            </div>
+
+            <div class="flex-1">
+
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Business licences
+              </h3>
+
+              <p class="text-sm text-gray-500 mb-4">
+                Approvals and licences for businesses operating locally.
+              </p>
+
+              <div class="space-y-1">
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Food businesses</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Street trading</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Entertainment permits</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Building -->
+        <div class="category-card bg-white border border-gray-200 rounded-xl p-6">
+
+          <div class="flex gap-4">
+
+            <div class="w-11 h-11 flex-shrink-0 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="tool"></i>
+            </div>
+
+            <div class="flex-1">
+
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Building & property
+              </h3>
+
+              <p class="text-sm text-gray-500 mb-4">
+                Building, development and property-related approvals.
+              </p>
+
+              <div class="space-y-1">
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Building consents</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Resource consents</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Earthworks</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Events -->
+        <div class="category-card bg-white border border-gray-200 rounded-xl p-6">
+
+          <div class="flex gap-4">
+
+            <div class="w-11 h-11 flex-shrink-0 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="calendar"></i>
+            </div>
+
+            <div class="flex-1">
+
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Events & public spaces
+              </h3>
+
+              <p class="text-sm text-gray-500 mb-4">
+                Permits for events and activities held in public places.
+              </p>
+
+              <div class="space-y-1">
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Event permits</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Road closures</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Use of public spaces</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Vehicles -->
+        <div class="category-card bg-white border border-gray-200 rounded-xl p-6">
+
+          <div class="flex gap-4">
+
+            <div class="w-11 h-11 flex-shrink-0 bg-councilLight text-council rounded-lg flex items-center justify-center">
+              <i data-feather="truck"></i>
+            </div>
+
+            <div class="flex-1">
+
+              <h3 class="font-bold text-lg text-gray-900 mb-1">
+                Vehicles & transport
+              </h3>
+
+              <p class="text-sm text-gray-500 mb-4">
+                Local transport permits and vehicle-related requirements.
+              </p>
+
+              <div class="space-y-1">
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Parking permits</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Heavy vehicle permits</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+                <a href="#" class="service-link flex justify-between items-center px-3 py-2 rounded text-sm">
+                  <span>Vehicle crossings</span>
+                  <i data-feather="chevron-right" class="w-4 h-4 text-gray-400"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Regulations -->
+    <section class="mt-16">
+
+      <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+
+        <div class="px-7 py-6 border-b border-gray-200">
+
+          <p class="text-sm font-semibold uppercase tracking-wider text-council mb-2">
+            Local rules
+          </p>
+
+          <h2 class="text-2xl font-bold text-gray-900">
+            Regulations & bylaws
+          </h2>
+
+          <p class="text-sm text-gray-600 mt-2">
+            Find the local rules that apply throughout the Square City district.
+          </p>
+
+        </div>
+
+
+        <div class="divide-y divide-gray-100">
+
+          <a href="#"
+             class="flex items-center justify-between px-7 py-5 hover:bg-gray-50">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                <i data-feather="book-open" class="w-5 h-5 text-gray-600"></i>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900">
+                  District bylaws
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Search and read current council bylaws.
+                </p>
+              </div>
+
+            </div>
+
+            <i data-feather="chevron-right" class="text-gray-400"></i>
+
+          </a>
+
+
+          <a href="#"
+             class="flex items-center justify-between px-7 py-5 hover:bg-gray-50">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                <i data-feather="volume-2" class="w-5 h-5 text-gray-600"></i>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900">
+                  Noise control
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Rules covering excessive and unreasonable noise.
+                </p>
+              </div>
+
+            </div>
+
+            <i data-feather="chevron-right" class="text-gray-400"></i>
+
+          </a>
+
+
+          <a href="#"
+             class="flex items-center justify-between px-7 py-5 hover:bg-gray-50">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                <i data-feather="map-pin" class="w-5 h-5 text-gray-600"></i>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900">
+                  Public places
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Rules relating to parks, streets and public areas.
+                </p>
+              </div>
+
+            </div>
+
+            <i data-feather="chevron-right" class="text-gray-400"></i>
+
+          </a>
+
+
+          <a href="#"
+             class="flex items-center justify-between px-7 py-5 hover:bg-gray-50">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                <i data-feather="trash-2" class="w-5 h-5 text-gray-600"></i>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900">
+                  Waste management
+                </h3>
+                <p class="text-sm text-gray-500">
+                  Local requirements for waste and recycling.
+                </p>
+              </div>
+
+            </div>
+
+            <i data-feather="chevron-right" class="text-gray-400"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Help -->
+    <section class="mt-10">
+
+      <div class="bg-councilLight rounded-xl p-7 flex flex-col md:flex-row md:items-center justify-between gap-6">
+
+        <div class="flex gap-4">
+
+          <div class="text-council mt-1">
+            <i data-feather="help-circle"></i>
+          </div>
+
+          <div>
+
+            <h3 class="font-bold text-gray-900 mb-1">
+              Not sure what you need?
+            </h3>
+
+            <p class="text-sm text-gray-700">
+              Contact the Council and our team can help you identify
+              the licence, permit or approval you require.
+            </p>
+
+          </div>
+
+        </div>
+
+        <a href="#"
+           class="whitespace-nowrap bg-council text-white px-5 py-3 rounded-lg font-semibold text-sm hover:bg-councilDark">
+          Contact Council
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-councilDark text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+      <div class="grid md:grid-cols-4 gap-10">
+
+        <div>
+
+          <div class="flex items-center gap-3 mb-4">
+
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+              <i data-feather="map"></i>
+            </div>
+
+            <div>
+              <div class="font-bold">
+                Square City
+              </div>
+              <div class="text-xs text-white/60">
+                District Council
+              </div>
+            </div>
+
+          </div>
+
+          <p class="text-sm text-white/60 leading-relaxed">
+            Local government serving the Square City district.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="font-semibold mb-4">
+            Services
+          </h4>
+
+          <div class="space-y-2 text-sm text-white/60">
+
+            <a href="#" class="block hover:text-white">
+              Licences & regulations
+            </a>
+
+            <a href="#" class="block hover:text-white">
+              Property & rates
+            </a>
+
+            <a href="#" class="block hover:text-white">
+              Waste & recycling
+            </a>
+
+            <a href="#" class="block hover:text-white">
+              Building & planning
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="font-semibold mb-4">
+            Council
+          </h4>
+
+          <div class="space-y-2 text-sm text-white/60">
+
+            <a href="#" class="block hover:text-white">
+              About the Council
+            </a>
+
+            <a href="#" class="block hover:text-white">
+              Council meetings
+            </a>
+
+            <a href="#" class="block hover:text-white">
+              Councillors
+            </a>
+
+            <a href="#" class="block hover:text-white">
+              Consultations
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="font-semibold mb-4">
+            Contact
+          </h4>
+
+          <div class="space-y-2 text-sm text-white/60">
+
+            <p>1 Civic Square</p>
+            <p>Square City</p>
+            <p>0800 555 010</p>
+            <p>info@squarecity.gov.sc</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40">
+
+        <p>
+          © 2026 Square City District Council
+        </p>
+
+        <div class="flex gap-5">
+
+          <a href="#" class="hover:text-white">
+            Privacy
+          </a>
+
+          <a href="#" class="hover:text-white">
+            Accessibility
+          </a>
+
+          <a href="#" class="hover:text-white">
+            Terms of use
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+    feather.replace();
+
+    const search = document.getElementById("serviceSearch");
+    const cards = document.querySelectorAll("#categories > div");
+
+    search.addEventListener("input", function () {
+
+      const query = this.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+
+        const text = card.innerText.toLowerCase();
+
+        if (text.includes(query)) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>

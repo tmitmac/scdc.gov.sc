@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On-Licence | Square City District Council</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            council: "#174A3A",
+            councilDark: "#10352A",
+            councilLight: "#EAF4EF",
+            gold: "#C49A3A"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-pattern {
+      background-image:
+        linear-gradient(rgba(16,53,42,.92), rgba(16,53,42,.92)),
+        url("images/council-bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded bg-council flex items-center justify-center text-white">
+        <i data-feather="home"></i>
+      </div>
+
+      <div>
+        <div class="font-bold text-lg text-councilDark leading-tight">
+          Square City
+        </div>
+        <div class="text-sm text-gray-500">
+          District Council
+        </div>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+      <a href="index.html" class="hover:text-council">Home</a>
+      <a href="services.html" class="hover:text-council">Services</a>
+      <a href="licences.html" class="text-council border-b-2 border-council pb-1">
+        Licences &amp; Regulations
+      </a>
+      <a href="contact.html" class="hover:text-council">Contact</a>
+    </nav>
+
+    <a href="apply-alcohol-licence.html"
+       class="hidden md:inline-flex items-center gap-2 bg-council text-white px-5 py-2.5 rounded font-semibold hover:bg-councilDark">
+      <i data-feather="file-text" class="w-4 h-4"></i>
+      Apply
+    </a>
+
+  </div>
+</div>
+
+
+  </header>
+
+  <!-- Breadcrumb -->
+
+  <div class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-3">
+      <div class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="index.html" class="hover:text-council">Home</a>
+        <i data-feather="chevron-right" class="w-4 h-4"></i>
+        <a href="licences.html" class="hover:text-council">Licences &amp; Regulations</a>
+        <i data-feather="chevron-right" class="w-4 h-4"></i>
+        <span class="text-gray-800">On-licence</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+
+  <section class="hero-pattern text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+
+  <div class="max-w-3xl">
+
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm mb-5">
+      <i data-feather="wine" class="w-4 h-4"></i>
+      Alcohol licensing
+    </div>
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-5">
+      On-licence
+    </h1>
+
+    <p class="text-lg md:text-xl text-green-50 leading-relaxed">
+      An on-licence allows alcohol to be sold or supplied for consumption
+      on the licensed premises.
+    </p>
+
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- Main -->
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+
+
+<div class="grid lg:grid-cols-3 gap-10">
+
+  <!-- Content -->
+  <div class="lg:col-span-2 space-y-10">
+
+    <!-- Overview -->
+    <section>
+      <h2 class="text-2xl font-bold text-councilDark mb-4">
+        What is an on-licence?
+      </h2>
+
+      <p class="text-gray-700 leading-7 mb-4">
+        You need an on-licence if you intend to sell or supply alcohol
+        to people for consumption at the premises where it is supplied.
+        This includes businesses such as restaurants, bars, taverns,
+        hotels, cafés and other hospitality businesses.
+      </p>
+
+      <p class="text-gray-700 leading-7">
+        The licence sets out the areas of the premises where alcohol may
+        be supplied, the hours during which alcohol may be sold or
+        supplied, and any additional conditions that apply to the
+        premises.
+      </p>
+    </section>
+
+
+    <!-- Examples -->
+    <section>
+      <h2 class="text-2xl font-bold text-councilDark mb-5">
+        Who needs an on-licence?
+      </h2>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <div class="w-10 h-10 rounded bg-councilLight text-council flex items-center justify-center mb-4">
+            <i data-feather="coffee"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Restaurants & cafés</h3>
+          <p class="text-sm text-gray-600 leading-6">
+            Restaurants and cafés that sell or supply alcohol for
+            customers to consume with their meals or at the premises.
+          </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <div class="w-10 h-10 rounded bg-councilLight text-council flex items-center justify-center mb-4">
+            <i data-feather="music"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Bars & taverns</h3>
+          <p class="text-sm text-gray-600 leading-6">
+            Bars, taverns and similar premises where alcohol is supplied
+            for consumption on site.
+          </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <div class="w-10 h-10 rounded bg-councilLight text-council flex items-center justify-center mb-4">
+            <i data-feather="briefcase"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Hotels</h3>
+          <p class="text-sm text-gray-600 leading-6">
+            Hotels and accommodation providers that supply alcohol to
+            guests or customers for consumption on the premises.
+          </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-lg p-5">
+          <div class="w-10 h-10 rounded bg-councilLight text-council flex items-center justify-center mb-4">
+            <i data-feather="users"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">BYO restaurants</h3>
+          <p class="text-sm text-gray-600 leading-6">
+            Restaurants that allow customers to bring their own alcohol
+            onto the premises may also require an on-licence.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Before applying -->
+    <section>
+      <h2 class="text-2xl font-bold text-councilDark mb-4">
+        Before you apply
+      </h2>
+
+      <p class="text-gray-700 leading-7 mb-5">
+        Before applying, make sure your proposed premises can lawfully
+        operate as a licensed premises and that you have the information
+        and supporting documents required for your application.
+      </p>
+
+      <div class="space-y-3">
+
+        <div class="flex gap-4 bg-white border border-gray-200 rounded-lg p-5">
+          <div class="text-council mt-1">
+            <i data-feather="check-circle"></i>
+          </div>
+          <div>
+            <h3 class="font-bold">Planning and building requirements</h3>
+            <p class="text-sm text-gray-600 mt-1 leading-6">
+              Check that the proposed use of the premises complies with
+              Council planning and building requirements.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white border border-gray-200 rounded-lg p-5">
+          <div class="text-council mt-1">
+            <i data-feather="check-circle"></i>
+          </div>
+          <div>
+            <h3 class="font-bold">Certified manager</h3>
+            <p class="text-sm text-gray-600 mt-1 leading-6">
+              Your premises must have an appropriately certified manager
+              available when alcohol is being sold or supplied, as
+              required by the licence conditions.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white border border-gray-200 rounded-lg p-5">
+          <div class="text-council mt-1">
+            <i data-feather="check-circle"></i>
+          </div>
+          <div>
+            <h3 class="font-bold">Host responsibility</h3>
+            <p class="text-sm text-gray-600 mt-1 leading-6">
+              You must have appropriate procedures for preventing
+              intoxication, preventing sales to minors and supporting
+              the responsible consumption of alcohol.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white border border-gray-200 rounded-lg p-5">
+          <div class="text-council mt-1">
+            <i data-feather="check-circle"></i>
+          </div>
+          <div>
+            <h3 class="font-bold">Supporting documents</h3>
+            <p class="text-sm text-gray-600 mt-1 leading-6">
+              You will need to provide information such as floor plans,
+              proposed trading hours, manager details and other documents
+              relevant to your application.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Trading hours -->
+    <section>
+      <h2 class="text-2xl font-bold text-councilDark mb-4">
+        Trading hours
+      </h2>
+
+      <div class="bg-councilLight border-l-4 border-council rounded-r-lg p-6">
+        <div class="flex gap-4">
+          <i data-feather="clock" class="text-council mt-1"></i>
+
+          <div>
+            <h3 class="font-bold text-councilDark mb-2">
+              Your licence will specify your permitted hours
+            </h3>
+
+            <p class="text-gray-700 leading-6">
+              The hours during which alcohol may be sold or supplied will
+              be specified on your licence. When applying, you should
+              provide the normal hours of operation for the premises and
+              explain any proposed late-night trading.
+            </p>
+
+            <p class="text-gray-700 leading-6 mt-3">
+              Council may impose conditions on trading hours depending
+              on the circumstances of the premises and the application.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Conditions -->
+    <section>
+      <h2 class="text-2xl font-bold text-councilDark mb-4">
+        Licence conditions
+      </h2>
+
+      <p class="text-gray-700 leading-7 mb-5">
+        An on-licence may include conditions relating to how alcohol is
+        supplied and how the premises is operated. Conditions can include:
+      </p>
+
+      <ul class="space-y-3">
+
+        <li class="flex gap-3">
+          <i data-feather="check" class="text-council mt-1"></i>
+          <span>the permitted days and hours for selling alcohol;</span>
+        </li>
+
+        <li class="flex gap-3">
+          <i data-feather="check" class="text-council mt-1"></i>
+          <span>the areas of the premises where alcohol may be supplied;</span>
+        </li>
+
+        <li class="flex gap-3">
+          <i data-feather="check" class="text-council mt-1"></i>
+          <span>food and non-alcoholic drink requirements;</span>
+        </li>
+
+        <li class="flex gap-3">
+          <i data-feather="check" class="text-council mt-1"></i>
+          <span>requirements relating to certified managers;</span>
+        </li>
+
+        <li class="flex gap-3">
+          <i data-feather="check" class="text-council mt-1"></i>
+          <span>requirements for preventing intoxication and harm;</span>
+        </li>
+
+        <li class="flex gap-3">
+          <i data-feather="check" class="text-council mt-1"></i>
+          <span>requirements relating to minors and restricted areas.</span>
+        </li>
+
+      </ul>
+    </section>
+
+
+    <!-- Application process -->
+    <section>
+      <h2 class="text-2xl font-bold text-councilDark mb-5">
+        Applying for an on-licence
+      </h2>
+
+      <div class="space-y-0">
+
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-9 h-9 rounded-full bg-council text-white flex items-center justify-center font-bold">
+              1
+            </div>
+            <div class="w-px h-16 bg-gray-300"></div>
+          </div>
+
+          <div class="pb-7">
+            <h3 class="font-bold text-lg">Prepare your application</h3>
+            <p class="text-gray-600 text-sm leading-6 mt-1">
+              Gather your premises information, floor plan, proposed
+              trading hours, manager details and supporting documents.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-9 h-9 rounded-full bg-council text-white flex items-center justify-center font-bold">
+              2
+            </div>
+            <div class="w-px h-16 bg-gray-300"></div>
+          </div>
+
+          <div class="pb-7">
+            <h3 class="font-bold text-lg">Submit and pay the fee</h3>
+            <p class="text-gray-600 text-sm leading-6 mt-1">
+              Submit the completed application to Council and pay the
+              applicable application fee.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-9 h-9 rounded-full bg-council text-white flex items-center justify-center font-bold">
+              3
+            </div>
+            <div class="w-px h-16 bg-gray-300"></div>
+          </div>
+
+          <div class="pb-7">
+            <h3 class="font-bold text-lg">Application assessment</h3>
+            <p class="text-gray-600 text-sm leading-6 mt-1">
+              Council officers and relevant agencies assess the
+              application and may request further information.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="flex gap-5">
+          <div>
+            <div class="w-9 h-9 rounded-full bg-council text-white flex items-center justify-center font-bold">
+              4
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-lg">Decision</h3>
+            <p class="text-gray-600 text-sm leading-6 mt-1">
+              The application is considered by the appropriate
+              licensing authority and a decision is issued.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Important -->
+    <section class="bg-amber-50 border border-amber-200 rounded-lg p-6">
+      <div class="flex gap-4">
+        <i data-feather="alert-triangle" class="text-amber-700 mt-1"></i>
+
+        <div>
+          <h2 class="font-bold text-amber-900 mb-2">
+            You must have a licence before selling alcohol
+          </h2>
+
+          <p class="text-sm text-amber-900/80 leading-6">
+            Do not begin selling or supplying alcohol until the required
+            licence has been issued and is in force. Operating without
+            the required licence may result in enforcement action.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- Sidebar -->
+  <aside class="lg:col-span-1">
+
+    <div class="sticky top-6 space-y-5">
+
+      <!-- Apply -->
+      <div class="bg-council rounded-xl p-6 text-white shadow-sm">
+
+        <div class="w-11 h-11 bg-white/10 rounded-lg flex items-center justify-center mb-5">
+          <i data-feather="file-plus"></i>
+        </div>
+
+        <h2 class="text-xl font-bold mb-2">
+          Apply for an on-licence
+        </h2>
+
+        <p class="text-green-50 text-sm leading-6 mb-5">
+          Ready to apply? Complete the Council's online application form.
+        </p>
+
+        <a href="apply-alcohol-licence.html"
+           class="flex items-center justify-center gap-2 bg-white text-council font-bold px-5 py-3 rounded-lg hover:bg-gray-100">
+          Start application
+          <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+
+      </div>
+
+
+      <!-- At a glance -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+
+        <h2 class="font-bold text-lg text-councilDark mb-5">
+          At a glance
+        </h2>
+
+        <div class="space-y-4">
+
+          <div class="flex gap-3">
+            <i data-feather="map-pin" class="w-5 h-5 text-council"></i>
+            <div>
+              <div class="font-semibold text-sm">Licensed premises</div>
+              <div class="text-xs text-gray-500 mt-1">
+                Alcohol is consumed at the premises.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-3">
+            <i data-feather="clock" class="w-5 h-5 text-council"></i>
+            <div>
+              <div class="font-semibold text-sm">Trading hours</div>
+              <div class="text-xs text-gray-500 mt-1">
+                Set out on the issued licence.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-3">
+            <i data-feather="users" class="w-5 h-5 text-council"></i>
+            <div>
+              <div class="font-semibold text-sm">Manager required</div>
+              <div class="text-xs text-gray-500 mt-1">
+                Certified management requirements apply.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Related -->
+      <div class="bg-white border border-gray-200 rounded-xl p-6">
+
+        <h2 class="font-bold text-lg text-councilDark mb-4">
+          Other alcohol licences
+        </h2>
+
+        <div class="divide-y divide-gray-200">
+
+          <a href="off-licence.html"
+             class="flex items-center justify-between py-3 group">
+            <span class="text-sm font-medium group-hover:text-council">
+              Off-licence
+            </span>
+            <i data-feather="chevron-right"
+               class="w-4 h-4 text-gray-400 group-hover:text-council"></i>
+          </a>
+
+          <a href="club-licence.html"
+             class="flex items-center justify-between py-3 group">
+            <span class="text-sm font-medium group-hover:text-council">
+              Club licence
+            </span>
+            <i data-feather="chevron-right"
+               class="w-4 h-4 text-gray-400 group-hover:text-council"></i>
+          </a>
+
+          <a href="special-licence.html"
+             class="flex items-center justify-between py-3 group">
+            <span class="text-sm font-medium group-hover:text-council">
+              Special licence
+            </span>
+            <i data-feather="chevron-right"
+               class="w-4 h-4 text-gray-400 group-hover:text-council"></i>
+          </a>
+
+          <a href="managers-certificate.html"
+             class="flex items-center justify-between py-3 group">
+            <span class="text-sm font-medium group-hover:text-council">
+              Manager's certificate
+            </span>
+            <i data-feather="chevron-right"
+               class="w-4 h-4 text-gray-400 group-hover:text-council"></i>
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- Help -->
+      <div class="bg-gray-100 rounded-xl p-6">
+
+        <div class="flex items-center gap-3 mb-3">
+          <i data-feather="help-circle" class="text-council"></i>
+          <h2 class="font-bold text-councilDark">
+            Need help?
+          </h2>
+        </div>
+
+        <p class="text-sm text-gray-600 leading-6 mb-4">
+          If you are unsure which licence you need, contact the
+          Square City District Council Alcohol Licensing team before
+          submitting your application.
+        </p>
+
+        <a href="contact.html"
+           class="text-sm font-bold text-council hover:underline">
+          Contact Alcohol Licensing →
+        </a>
+
+      </div>
+
+    </div>
+  </aside>
+
+</div>
+
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="bg-councilDark text-white mt-10">
+
+
+<div class="max-w-7xl mx-auto px-6 py-10">
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div>
+      <div class="font-bold text-lg mb-2">
+        Square City District Council
+      </div>
+
+      <p class="text-sm text-green-100/70 leading-6">
+        Local government services, information and regulation
+        for the Square City district.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-3">Licences</h3>
+
+      <div class="space-y-2 text-sm text-green-100/70">
+        <a href="on-licence.html" class="block hover:text-white">
+          On-licence
+        </a>
+        <a href="off-licence.html" class="block hover:text-white">
+          Off-licence
+        </a>
+        <a href="special-licence.html" class="block hover:text-white">
+          Special licence
+        </a>
+        <a href="apply-alcohol-licence.html" class="block hover:text-white">
+          Apply for a licence
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-bold mb-3">Council</h3>
+
+      <div class="space-y-2 text-sm text-green-100/70">
+        <a href="contact.html" class="block hover:text-white">
+          Contact us
+        </a>
+        <a href="services.html" class="block hover:text-white">
+          Council services
+        </a>
+        <a href="licences.html" class="block hover:text-white">
+          Licences &amp; regulations
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/10 mt-8 pt-6 text-xs text-green-100/50">
+    © 2026 Square City District Council. Square Country.
+  </div>
+
+</div>
+
+
+  </footer>
+
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+</html>
